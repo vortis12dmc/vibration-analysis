@@ -1,0 +1,24 @@
+  974  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/A_Out_Bond/20230921_094155_0_y.bin ../concatTrains/0939_S546_S05/A_Out_Bond/20230921_094210_1_y.bin 0 7 23
+  976  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/A_Out_Bond/20230921_094155_0_y.bin ../concatTrains/0939_S546_S05/A_Out_Bond/20230921_094210_1_y.bin 0 7 23
+  977  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/A_Out_Rail/20230921_094200_0_y.bin none 0 0 16
+  978  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/A_Out_Rail/20230921_094200_0_y.bin none 0 0 16.1
+  979  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/A_Out_Rail/20230921_094200_0_y.bin none 0 0 16.5
+  980  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/A_Out_Rail/20230921_094200_0_y.bin none 0 0 16.2
+  981  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/A_Out_Bond/20230921_094155_0_y.bin ../concatTrains/0939_S546_S05/A_Out_Bond/20230921_094210_1_y.bin 0 7 23.2
+  982  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Rail/20230921_094127_0_y.bin ../concatTrains/0939_S546_S05/B_Out_Rail/20230921_094142_1_y.bin 0 0 30
+  983  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Rail/20230921_094127_0_y.bin ../concatTrains/0939_S546_S05/B_Out_Rail/20230921_094142_1_y.bin 0 11 27.2
+  984  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Rail/20230921_094127_0_y.bin ../concatTrains/0939_S546_S05/B_Out_Rail/20230921_094142_1_y.bin 0 7 23.2
+  985  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094139_1_y.bin none 0 0 16.2
+  986  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094124_0_y.bin ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094139_1_y.bin 0 0 30.2
+  987  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094124_0_y.bin ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094139_1_y.bin 0 12 18.2
+  988  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094124_0_y.bin ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094139_1_y.bin 0 12 28.2
+  989  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094124_0_y.bin ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094139_1_y.bin 0 11.5 27.7
+  990  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094124_0_y.bin ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094139_1_y.bin 0 10 26.2
+  991  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094124_0_y.bin ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094139_1_y.bin 0 9 25.2
+  992  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094124_0_y.bin ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094139_1_y.bin 0 11 27.2
+ 1008  cat history20240912.txt |grep readbinary_STFT_stackUp_timeExtract_v2.py
+ 1009  cat history20240912.txt |grep readbinary_STFT_stackUp_timeExtract_v2.py > history20240912_v2.txt 
+ 1013  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/A_Out_Rail/20230921_094200_0_y.bin none 0 0 16.2
+ 1015  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094124_0_y.bin ../concatTrains/0939_S546_S05/B_Out_Bond/20230921_094139_1_y.bin 0 11 27.2
+ 1016  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/B_Out_Rail/20230921_094127_0_y.bin ../concatTrains/0939_S546_S05/B_Out_Rail/20230921_094142_1_y.bin 0 7 23.2
+ 1017  python3 readbinary_STFT_stackUp_timeExtract_v2.py ../concatTrains/0939_S546_S05/A_Out_Bond/20230921_094155_0_y.bin ../concatTrains/0939_S546_S05/A_Out_Bond/20230921_094210_1_y.bin 0 7 23.2

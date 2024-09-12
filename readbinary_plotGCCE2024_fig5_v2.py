@@ -47,8 +47,8 @@ accTitle1 = "Raw " +sprit_readFile1[2]+'/'+sprit_readFile1[3]+'/'+ axis1 + "-axi
 accTitle2 = "Raw " +sprit_readFile2[2]+'/'+sprit_readFile2[3]+'/'+ axis2 + "-axis"
 #powTitle1 = "Pow " +sprit_readFile1[2]+'/'+sprit_readFile1[3]+'/'+ axis1 + "-axis"
 #powTitle2 = "Pow " +sprit_readFile2[2]+'/'+sprit_readFile2[3]+'/'+ axis2 + "-axis"
-powTitle1 = "Pow " +sprit_readFile1[2]+"/N_Right_Rail/"+ axis1 + "-axis"
-powTitle2 = "Pow " +sprit_readFile2[2]+"/N_Right_Bond/"+ axis2 + "-axis"
+powTitle1 = "Pow " +sprit_readFile1[2]+"/F_Right_Rail/"+ axis1 + "-axis"
+powTitle2 = "Pow " +sprit_readFile2[2]+"/F_Right_Bond/"+ axis2 + "-axis"
 plotTitle = sprit_readFile1[2]+'/'+sprit_readFile1[3]+'/'+ axis1 + "-axis" +' & '+sprit_readFile2[2]+'/'+sprit_readFile2[3]+'/'+ axis2 + "-axis_npseg-"+str(npseg)
 #crosTitle = "Cros " +sprit_readFile1[7]+'/'+sprit_readFile1[8]+'/'+ axis1 + "-axis" +'&'+sprit_readFile2[7]+'/'+sprit_readFile2[8]+'/'+ axis2 + "-axis"
 #coheTitle = "Coherence " +sprit_readFile1[7]+'/'+sprit_readFile1[8]+'/'+ axis1 + "-axis" +'&'+sprit_readFile2[7]+'/'+sprit_readFile2[8]+'/'+ axis2 + "-axis"
@@ -171,7 +171,9 @@ freq1 = np.fft.fftfreq(len(signal1), d=1/fs)
 freq2 = np.fft.fftfreq(len(signal2), d=1/fs)
 
 # グラフのプロット
-fig, ax = plt.subplots(3, 1, figsize=(8, 4))
+fig, ax = plt.subplots(3, 1, figsize=(12, 5))
+#fig, ax = plt.subplots(3, 1, figsize=(8, 4)) #GCCE2024
+
 
 #plt.suptitle(plotTitle, fontsize=16)
 
@@ -197,6 +199,14 @@ ax[1,0].grid(True)
 power_in_dB1 = 10 * np.log10(np.abs(power_spectrum1) / reference_value)
 power_in_dB2 = 10 * np.log10(np.abs(power_spectrum2) / reference_value)
 
+# クロススペクトラムの最大値を計算
+max_cross_spectrum = np.max(np.abs(Pxy))
+# クロススペクトラムの最小値を計算
+min_cross_spectrum = np.min(np.abs(Pxy))
+# 最大値と最小値を出力
+print("Maximum Cross-Spectrum Amplitude: " + str(max_cross_spectrum))
+print("Minimum Cross-Spectrum Amplitude: " + str(min_cross_spectrum))
+
 # パワースペクトラムのプロット
 ax[0].set_title(powTitle1)
 ax[0].plot(freq1[:len(freq1)//2], power_in_dB1[:len(power_spectrum1)//2])
@@ -219,6 +229,7 @@ ax[2].plot(f, np.abs(Pxy))
 ax[2].set_title('Cross-Spectrum Amplitude')
 ax[2].set_xlabel('Frequency (Hz)')
 ax[2].set_ylabel('Amplitude')
+ax[2].set_ylim(0, 7)
 ax[2].grid(True)
 
 """
