@@ -8,7 +8,10 @@ from matplotlib import image as mpimg
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 from matplotlib.ticker import MaxNLocator
 
-writeFilePass = "/gdsfs/gdsfs/mukai/jr/analyTrainData/output/ICCEAsia2024_Plot/rep/stop/"
+writeFilePass = "/gdsfs/gdsfs/mukai/jr/analyTrainData/output/ICCEAsia2024_Plot/rep/stop/timeTrim/"
+
+timeStart = 0
+timeEnd = 30
 
 titleFontSize = 16
 args = sys.argv
@@ -88,7 +91,7 @@ def process_files(file_pair, num_list):
 for idx, file_pair in enumerate(readFile):
     process_files(file_pair, num[idx])
 
-threshold_val=50
+threshold_val=0
 
 signal = [[] for _ in range(6)]
 
@@ -120,10 +123,11 @@ for i in range(6):
     ax.set_xlabel('Time [s]')
     ax.set_ylabel('Acceleration [G]')
     ax.set_ylim(-204.8, 204.7)
+    ax.set_xlim(timeStart, timeEnd)
     ax.xaxis.set_major_locator(MaxNLocator(integer=True))  # X軸の値を整数に揃える
     ax.grid(True)
-    plot_filename = writeFilePass + f"_plot_{i}.eps"
-    pre_plot_filename = writeFilePass + f"_plot_{i}.png"
+    plot_filename = writeFilePass + f"_plot_{i}"+str(timeStart)+"-"+str(timeEnd)+".eps"
+    pre_plot_filename = writeFilePass + f"_plot_{i}"+str(timeStart)+"-"+str(timeEnd)+".png"
     plt.savefig(plot_filename, format='eps')
     plt.savefig(pre_plot_filename, format='png')
     plt.close()

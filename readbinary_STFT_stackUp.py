@@ -14,8 +14,8 @@ readFile1_2 = dataPath + filename1_2
 threshold_val = 50
 """
 
-ylim_range_top = 2057
-ylim_range_bottom = -2058
+ylim_range_top = 205.7
+ylim_range_bottom = -205.8
 
 args = sys.argv
 arguments_count = len(sys.argv)
@@ -178,20 +178,20 @@ cb_sp1 = fig.add_axes([0.9, 0.07, 0.02, 0.35])
 
 
 #元データのプロット
-ax1.plot(time1, signal1)
+ax1.plot(time1, signal1/10)
 ax1.grid()
 ax1.set_title(accAxis, loc='center')
 ax1.set_ylim(ylim_range_bottom, ylim_range_top)
-ax1.set_xlabel("Time[s]")
-ax1.set_ylabel("Acceleration")
+ax1.set_xlabel("Time [s]")
+ax1.set_ylabel("Acceleration [G]")
 ax1.set_xlim(tms, tme)
 
 #スペクトログラムのプロット
 ax_sp1.set_xlim(tms, tme)
-ax_sp1.set_xlabel('time (s)')
+ax_sp1.set_xlabel('Time [s]')
 ax_sp1.tick_params(labelbottom=True)
 ax_sp1.set_ylim(0, freq_upper)
-ax_sp1.set_ylabel('frequency (Hz)')
+ax_sp1.set_ylabel('Frequency [Hz]')
 ax_sp1.set_title(fftAxis, loc='center')
 
 vmin = np.log10(np.abs(sp[freq_sp < freq_upper, :])**2).min()
